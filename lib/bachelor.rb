@@ -44,4 +44,4 @@ data = {
          "status":"Winner"
       }]
 }
-puts get_first_name_of_season_winner(data, "season 19")
+puts get_first_name_of_season_winner(data, "season 19".to_sym)
