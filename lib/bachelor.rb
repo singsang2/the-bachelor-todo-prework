@@ -30,8 +30,8 @@ end
 
 def get_average_age_for_season(data, season)
   total_age = 0
-  data.fetch(season).each {|contestant| total_age += contestant.fetch("age")}
-  name.split(" ")[0]
+  data.fetch(season).each {|contestant| total_age += contestant.fetch("age").to_i}
+  average_age = total_age / data.fetch(season).length
 end
 
 # data = {
