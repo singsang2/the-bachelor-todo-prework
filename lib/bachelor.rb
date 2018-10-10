@@ -42,6 +42,6 @@ data = {
          "hometown":"Hollywood, California",
          "occupation":"Waitress",
          "status":"Winner"
-      }
+      }]
 }
-get_first_name_of_season_winner(data, "season 19")
+puts get_first_name_of_season_winner(data, "season 19")
