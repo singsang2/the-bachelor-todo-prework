@@ -218,4 +218,4 @@ data = {
       }
    ]
 }
-puts get_average_age_for_season(data, "season 10")
+puts get_average_age_for_season(data, "season 10".to_sym)
