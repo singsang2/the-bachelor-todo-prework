@@ -1,6 +1,6 @@
 def get_first_name_of_season_winner(data, season)
   name = nil
-  data.fetch(season).each {|contestant| name = contestant[:name] if contestant.fetch(:status) == "Winner"}
+  data.fetch(season).each {|contestant| name = contestant[:name] if contestant.fetch("status") == "Winner"}
   name.split(" ")[0]
 end
 
