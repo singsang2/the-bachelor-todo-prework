@@ -23,7 +23,12 @@ end
 def get_occupation(data, hometown)
   occupation = nil
   data.each do |season, contestants|
-    contestants.each {|info| occupation = info.fetch("occupation") break if info.fetch("hometown") == hometown}
+    contestants.each do |info| 
+      if info.fetch("hometown") == hometown
+        occupation = info.fetch("occupation") 
+        break
+      end
+    end
   end
   occupation
 end
