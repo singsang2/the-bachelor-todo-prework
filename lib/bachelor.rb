@@ -21,11 +21,17 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  # code here
+  occupation = nil
+  data.each do |season, contestants|
+    contestants.each {|info| occupation = contestants.fetch("occupation") if info.fetch("hometown") == hometown}
+  end
+  occupation
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  total_age = 0
+  data.fetch(season).each {|contestant| total_age += contestant.fetch("age")}
+  name.split(" ")[0]
 end
 
 # data = {
